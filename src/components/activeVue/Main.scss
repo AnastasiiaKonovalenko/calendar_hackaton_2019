@@ -1,0 +1,46 @@
+$day_width: 60px;
+$day_height: 20px;
+$horizontal_indent: 1px;
+$vertical_indent: 1px;
+body {
+  background-color: rgb(170, 162, 162);
+ 
+}
+
+
+.heading {
+  color: rgb(223, 215, 215);
+  font-size: 24px;
+  font-family: cursive;
+  text-align: center;
+}
+.day {
+  padding-left: 14px;
+  color: rgb(223, 215, 215);
+  width: 30px;
+  height: 20px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+.day:hover {
+  color: rgb(124, 124, 124);
+}
+.year {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(6,200px);
+  justify-content: center;
+  margin: 10px;
+}
+
+.nameMonth {
+  color: rgb(223, 215, 215);
+  font-weight: bold;
+}
+
+.clip {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  color: rgb(223, 215, 215);
+}

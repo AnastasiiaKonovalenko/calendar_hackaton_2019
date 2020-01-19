@@ -43,25 +43,21 @@ const MonthArr = () => {
     <>
     <div>
       <div className='year'>
+       
         {monthNames.map((i)=>
-          <div>
-            <p>{i.nameMonth}</p>
-            <div className='calendar'>
-
-            </div>
+          <div className='month'>
+            <p className='heading'>{i.nameMonth}<i class="thumbtack icon"></i></p>
             <div className='calendar'>
               {[...Array.from(Array((new Date(x, i.id-1, 1).getDay() === 0)
                 ? 6
-                : (new Date(x, i.id-1, 1).getDay() - 1)), (_, index) => new Date(x, i.id, 0).getDate() - index).reverse(),
+                : (new Date(x, i.id-1, 1).getDay() - 1)), (_, index) => '').reverse(),
                 ...Array.from(Array(amount(x, i.id)), (el, i) => i+1),
-                ...Array.from(Array((new Date(x, i.id-1, 1).getDay() === 0)
-                ? 6
-                : (new Date(x, i.id-1, 1).getDay() - 1)), (_, index) => new Date(x, i.id, 1).getDate() + index)
-                  ]
-                .map(item => ( <div className="calendar__day">{item}</div>))}
+                 ]
+                .map(item => ( <div className=" day calendar__day">{item}</div>))}
             </div>
           </div>
         )}
+     
       </div>
     </div>
       </>

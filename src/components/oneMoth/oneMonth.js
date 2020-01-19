@@ -1,4 +1,5 @@
 import React from 'react';
+import '../activeVue/Main.scss';
 const days = Array.from(Array(31), (el, i) => i+1);
 const  monthNames = [
   {id:0,nameMonth:"January"},
@@ -48,7 +49,7 @@ const OneMonth = () => {
   
   const daysFromNextMonth = []
   return (
-    <div>
+    <div className= 'month'>
       <h2>{monthNames.find(item => d.getMonth() === item.id).nameMonth}</h2>
       <div className="calendar calendar-30 calendar-sun">
         {[...appendedDays, ...days, ...daysFromNextMonth].map(day => <div className="day calendar__day">{day}</div>)}
